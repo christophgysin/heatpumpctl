@@ -8,7 +8,7 @@ config:
 	(mkdir -p ${B} && cd ${B} && cmake ..)
 
 $(T):
-	(cd ${B} && make $@)
+	(cd ${B} && make $@ VERBOSE=$(VERBOSE))
 
 clang:
 	make CC=/usr/bin/clang CXX=/usr/bin/clang++ default
