@@ -1,9 +1,8 @@
-send:
+Alllgemeiner Status
+===================
 
-1800\r\n
-
+send: 1800\r\n
 receive:
-
 // Header
 1800;8
 // Temperaturwerte
@@ -155,3 +154,32 @@ WP_Anlagenstatus_Startdatum=$$
 WP_Anlagenstatus_Startuhrzeit=$$
 WP_Anlagenstatus_Compact=0b01
 WP_Anlagenstatus_Comfort=0b01
+
+
+Heizkurve
+=========
+
+Read:
+send: 3400\r\n
+recv: 3400;9;0;410;150;0;650;420;200;0;350
+
+Write:
+send: 3401\r\n
+recv: 3401;9;0;410;150;0;650;420;200;0;350\r\n
+send: 3401;9;0;410;185;0;650;420;200;0;350\r\n
+recv: 3401;9;0;410;185;0;650;420;200;0;350\r\n
+send: 999\r\n
+recv: 993 999\r\n
+
+Warmwassertemparatur
+====================
+
+send: 3500\r\n
+recv: 3500;17;0;0;1;0;500;513;0;0;0;0;0;0;1300;200;0;271;0\r\n
+send: 3501\r\n
+recv: 3501;1;500\r\n
+send: 3501;1;530\r\n
+recv: 3501;1;530\r\n
+send: 999\r\n
+recv: 993 999\r\n
+
