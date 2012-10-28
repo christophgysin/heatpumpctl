@@ -1,0 +1,5 @@
+Menü: Einstellungen
+ -> Datenzugang: Standard (PIN 9445)
+
+port settings:
+57600 8n1 xon/xoff
