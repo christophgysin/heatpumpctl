@@ -48,3 +48,110 @@ receive:
 1700;12;2;V2.33;1;5;19;12;8;10;42;12;0;1
 // Footer
 1800;8
+
+value names:
+
+Temperaturwerte
+WP_Temp_Heizkreis_Ist_Vorlauftemperatur=0.0
+WP_Temp_Heizkreis_Ist_Ruecklauftemperatur=0.0
+WP_Temp_Heizkreis_Soll_Ruecklauftemperatur=0.0
+WP_Temp_Heissgastemperatur=0.0
+WP_Temp_Aussentemperatur=0.0
+WP_Temp_Brauchwarmwasser_Ist_Temperatur=0.0
+WP_Temp_Brauchwarmwasser_Soll_Temperatur=0.0
+WP_Temp_Waermequellen_Eintrittstemperatur=0.0
+WP_Temp_Waermequellen_Austrittstemperatur=0.0
+WP_Temp_Mischkreis_1_Ist_Vorlauftemperatur=0.0
+WP_Temp_Mischkreis_1_Soll_Vorlauftemperatur=0.0
+WP_Temp_Raumstation=0.0
+
+Wärmepumpeneingänge
+WP_Eingaenge_Abtau_Soledruck_Durchfluss=0b01
+WP_Eingaenge_Sperrzeit_vom_EVU=0b01
+WP_Eingaenge_Hochdruckpressostat=0b01
+WP_Eingaenge_Motorschutz=0b01
+WP_Eingaenge_Niederdruckpressostat=0b01
+WP_Eingaenge_Anschluss_einer_Fremdstromanode=0b01
+
+Wärmepumpenausgänge
+WP_Ausgaenge_Abtauventil=0b01
+WP_Ausgaenge_Brauchwarmwasserumwaelzpumpe=0b01
+WP_Ausgaenge_Fussbodenheizungsumwaelzpumpe=0b01
+WP_Ausgaenge_Heizungsumwaelzpumpe=0b01
+WP_Ausgaenge_Mischer_1_Auf=0b01
+WP_Ausgaenge_Mischer_1_Zu=0b01
+WP_Ausgaenge_Ventilation_des_Waermepumpengehaeuses =0b01
+WP_Ausgaenge_Ventilator_Brunnen_oder_Soleumwaelzpu mpe=0b01
+WP_Ausgaenge_Verdichter_1_in_Waermepumpe=0b01
+WP_Ausgaenge_Verdichter_2_in_Waermepumpe=0b01
+WP_Ausgaenge_Zusatzumwaelzpumpe_Zirkulationspumpe= 0b01
+WP_Ausgaenge_Zweiter_Waermeerzeuger_1=0b01
+WP_Ausgaenge_Zweiter_Waermeerzeuger_2_Sammelstoeru ng=0b01
+
+Ablaufzeiten
+WP_Ablaufzeiten_Waermepumpe=$$
+WP_Ablaufzeiten_Zweiter_Waermeerzeuger_1=$$
+WP_Ablaufzeiten_Zweiter_Waermeerzeuger_2=$$
+WP_Ablaufzeiten_Netzeinschaltverzoegerung=$$
+WP_Ablaufzeiten_Standzeit_Schaltspielsperre=$$
+WP_Ablaufzeiten_Einschaltverzoegerung_Schaltspiels perre=$$
+WP_Ablaufzeiten_Verdichter_Standzeit=$$
+WP_Ablaufzeiten_Heizungsregler_Mehr_Zeit=$$
+WP_Ablaufzeiten_Heizungsregler_Weniger_Zeit=$$
+WP_Ablaufzeiten_Thermische_Desinfektion=$$
+WP_Ablaufzeiten_Sperre_Brauchwarmwasser=$$
+
+Betriebstunden
+WP_BetrStd_Betriebsstunden_Verdichter_1=0u32
+WP_BetrStd_Impulse_Verdichter_1=0u32
+WP_BetrStd_Durchschnittliche_Laufzeit_Verdichter_1 =0u32
+WP_BetrStd_Betriebsstunden_Verdichter_2=0u32
+WP_BetrStd_Impulse_Verdichter_2=0u32
+WP_BetrStd_Durchschnittliche_Laufzeit_Verdichter_2 =0u32
+WP_BetrStd_Betriebsstunden_Zweiter_Waermeerzeuger_ 1=0u32
+WP_BetrStd_Betriebsstunden_Zweiter_Waermeerzeuger_ 2=0u32
+WP_BetrStd_Betriebsstunden_Waermepumpe=0u32
+
+Fehler
+WP_Fehler_1_Code=$$
+WP_Fehler_1_Datum=$$
+WP_Fehler_1_Uhrzeit=$$
+WP_Fehler_2_Code=$$
+WP_Fehler_2_Datum=$$
+WP_Fehler_2_Uhrzeit=$$
+WP_Fehler_3_Code=$$
+WP_Fehler_3_Datum=$$
+WP_Fehler_3_Uhrzeit=$$
+WP_Fehler_4_Code=$$
+WP_Fehler_4_Datum=$$
+WP_Fehler_4_Uhrzeit=$$
+WP_Fehler_5_Code=$$
+WP_Fehler_5_Datum=$$
+WP_Fehler_5_Uhrzeit=$$
+
+Abschaltungen
+WP_Abschaltung_1_Code=$$
+WP_Abschaltung_1_Datum=$$
+WP_Abschaltung_1_Uhrzeit=$$
+WP_Abschaltung_2_Code=$$
+WP_Abschaltung_2_Datum=$$
+WP_Abschaltung_2_Uhrzeit=$$
+WP_Abschaltung_3_Code=$$
+WP_Abschaltung_3_Datum=$$
+WP_Abschaltung_3_Uhrzeit=$$
+WP_Abschaltung_4_Code=$$
+WP_Abschaltung_4_Datum=$$
+WP_Abschaltung_4_Uhrzeit=$$
+WP_Abschaltung_5_Code=$$
+WP_Abschaltung_5_Datum=$$
+WP_Abschaltung_5_Uhrzeit=$$
+
+Anlagenstatus
+WP_Anlagenstatus_Waermepumpentyp=$$
+WP_Anlagenstatus_Software_Version=$$
+WP_Anlagenstatus_Bivalenzstufe=0b01
+WP_Anlagenstatus_Aktueller_Betriebszustand=0b01
+WP_Anlagenstatus_Startdatum=$$
+WP_Anlagenstatus_Startuhrzeit=$$
+WP_Anlagenstatus_Compact=0b01
+WP_Anlagenstatus_Comfort=0b01
