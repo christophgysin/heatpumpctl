@@ -11,5 +11,8 @@ set(CMAKE_CXX_FLAGS "-Wall -Wextra")
 set(CMAKE_CXX_FLAGS_DEBUG "-g -O0")
 set(CMAKE_CXX_FLAGS_RELEASE "-O2")
 
+set(LIB_SERIAL serial)
+add_subdirectory(lib)
+include_directories(lib)
 add_subdirectory(src)
 add_subdirectory(test)

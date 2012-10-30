@@ -1,12 +1,9 @@
 set(SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR} PARENT_SCOPE)
 
-set(SRCS
-    heatpumpctl.cpp
-    )
-add_executable(heatpumpctl
-    ${SRCS}
-    )
+add_executable(heatpumpctl heatpumpctl.cpp)
 target_link_libraries(heatpumpctl
+    ${LIB_SERIAL}
     ${Boost_SYSTEM_LIBRARY}
-    pthread
+    ${Boost_THREAD_LIBRARY}
+    ${CMAKE_THREAD_LIBS_INIT}
     )
