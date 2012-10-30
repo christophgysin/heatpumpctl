@@ -2,6 +2,7 @@
 #include "values.h"
 
 #include <boost/foreach.hpp>
+#include <boost/lexical_cast.hpp>
 #include <boost/tokenizer.hpp>
 #include <boost/algorithm/string/finder.hpp>
 #include <boost/algorithm/string/iter_find.hpp>
@@ -14,7 +15,6 @@ parser::result_t Parser::parse_strings(const std::string& str) const
 {
     parser::result_t result;
 
-    size_t index = 0;
     const std::string line_delimiter("\r\n");
     BOOST_FOREACH(const std::string& line, split_lines(str, line_delimiter))
     {
@@ -52,6 +52,14 @@ parser::result_t Parser::parse_strings(const std::string& str) const
         section.name = values::headings[code];
         //std::cerr << "info: heading found: " << code << " -> " << section.name << std::endl;
 
+        size_t count = boost::lexical_cast<size_t>(*begin++);
+        if(count != values::names[section.name].size())
+            std::cerr << "warning: section " << section.name
+                << " has unexpected number of values: " << count
+                << ", expected: " << values::names[section.name].size() << std::endl;
+
+        size_t index = 0;
+
         BOOST_FOREACH(const std::string& token, std::make_pair<>(begin, end))
         {
             //std::cerr << "info: token[" << index << "]: " << token << std::endl;
@@ -59,7 +67,10 @@ parser::result_t Parser::parse_strings(const std::string& str) const
             if(values::names.count(section.name))
             {
                 if(index >= values::names[section.name].size())
+                {
+                    std::cerr << "error: no name defined for value at index " << index << ": " << token << std::endl;
                     continue;
+                }
 
                 std::string key = values::names[section.name][index++];
                 parser::value value(key, token);

@@ -12,3 +12,5 @@ $(T):
 
 clang:
 	make CC=/usr/bin/clang CXX=/usr/bin/clang++ default
+
+.PHONY: $(T)
