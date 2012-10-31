@@ -3,7 +3,7 @@
 #include <boost/foreach.hpp>
 #include <boost/assign.hpp>
 
-#include "Parser.h"
+#include <luxtronik/Parser.h>
 
 struct fixture {
 

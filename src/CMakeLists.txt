@@ -2,6 +2,7 @@ set(SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR} PARENT_SCOPE)
 
 add_executable(heatpumpctl heatpumpctl.cpp)
 target_link_libraries(heatpumpctl
+    luxtronik
     ${LIB_SERIAL}
     ${Boost_SYSTEM_LIBRARY}
     ${Boost_THREAD_LIBRARY}
